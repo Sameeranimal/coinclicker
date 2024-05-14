@@ -32,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
         $pdo = NULL;
         $stmt = NULL;
 
-        header("Location: ../index.html");
+        header("Location: ../index.php");
 
         die();
     } catch (PDOException $e) {
@@ -42,5 +42,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 
 }
 else {
-    header("Location: ../index.html");
+    header("Location: ../index.php");
 }

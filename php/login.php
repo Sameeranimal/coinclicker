@@ -4,7 +4,7 @@ session_start();
 $host = "localhost";
 $username = "root";
 $password = "";
-$database = "clicker";
+$database = "rememberme";
 
 try {
   $conn = new PDO("mysql:host=$host;dbname=$database", $username, $password);
