@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Forgot Password UI Using CSS - @code.scientist x @codingtorque</title>
+    <title>Reset password</title>
 </head>
 
 <body>
