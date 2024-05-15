@@ -28,6 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     header("Location: dashbord.php");
   } else {
     echo "Invalid username or password.";
+    header("Location: passwordreset.php");
   }
 }
 $conn = null;
