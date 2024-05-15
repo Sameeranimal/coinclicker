@@ -114,6 +114,9 @@
                     <input type="password" class="form-control" id="pwd" name="pwd" placeholder="Password" style="height: 50px; width: 300px; text-align: center; font-size: 20px;  margin-bottom: 20px;" required>
                   </div>
                   <button type="submit" class="btn btn-primary" style="height: 50px; width: 200px; text-align: center; font-size: 30px;  margin-bottom: 20px;">Login</button>
+                  <div class="mt-4 text-center" style=" color: white">
+                      Reset your password <a href="php/passwordreset.php">Create a new one</a>
+                  </div>
                 </form>
               </div>
 
