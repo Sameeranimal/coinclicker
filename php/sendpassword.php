@@ -39,8 +39,34 @@ try {
     
     // Check if any rows were affected
     if ($stmt->rowCount() > 0) {
-        // Success message
-        echo "Password reset token generated and stored successfully.";
+        // Load PHPMailer
+        require __DIR__ . "/mailer.php";
+        
+        $mail = new PHPMailer\PHPMailer\PHPMailer();
+        $mail->isSMTP();
+        $mail->Host = 'smtp.gmail.com'; // Specify main and backup SMTP servers
+        $mail->SMTPAuth = true;
+        $mail->Username = 'aaronverdoold770@gmail.com'; // SMTP username
+        $mail->Password = 'rcmw spwo sgan sujd'; // SMTP password
+        $mail->SMTPSecure = 'tls';
+        $mail->Port = 587;
+
+        // Sender and recipient settings
+        $mail->setFrom('noreply@example.com', 'No Reply');
+        $mail->addAddress($email); // Correctly pass the email address as a string
+
+        // Setting the email content
+        $mail->isHTML(true);
+        $mail->Subject = 'Password Reset';
+        $mail->Body = <<<END
+        Click <a href="http://example.com/passwordreset.php?token=$token">here</a> to reset your password.
+        END;
+
+        if ($mail->send()) {
+            echo "Password reset token generated and email sent successfully.";
+        } else {
+            echo "Failed to send email. Mailer error: {$mail->ErrorInfo}";
+        }
     } else {
         // No rows affected, email not found
         echo "Email not found in the database.";
