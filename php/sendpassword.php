@@ -59,7 +59,7 @@ try {
         $mail->isHTML(true);
         $mail->Subject = 'Password Reset';
         $mail->Body = <<<END
-        Click <a href="http://example.com/passwordreset.php?token=$token">here</a> to reset your password.
+        Click <a href="http://localhost/coinclicker/php/linkmail.php?token=$token">here</a> to reset your password.
         END;
 
         if ($mail->send()) {
