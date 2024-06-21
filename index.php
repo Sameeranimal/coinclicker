@@ -39,10 +39,7 @@
 
 
         </div>
-        <div class="icons">
-            <button class="settings"><img src="img/settings.png" class="settings"></button>
-            <button id="achievementsButton" onclick="overlayOn('achievements')">Achievements</button>
-        </div>
+      
         <div id="invest" >
             <div class="close" onclick="overlayOff('invest')">Close</div>
             <ul id="invest-left">
@@ -163,7 +160,10 @@
         </div>
      </main>
      <footer>
-        
+     <div class="icons">
+            <button class="settings"><img src="img/settings.png" class="settings"></button>
+            <button id="achievementsButton" onclick="overlayOn('achievements')">Achievements</button>
+        </div>
      </footer>
      <script src="javascript/value.js"></script>
      <script src="javascript/overlay.js"></script>

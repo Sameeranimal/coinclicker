@@ -99,14 +99,16 @@ main {
   height: 60px;
   width: 200px;
   font-size: 22px;
+  margin-right: 20px
 }
 
 /* Settings button styles */
 .settings {
   height: 50px;
-  width: 50px;
   outline: none;
   border: none;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 /* Invest popup styles */
@@ -235,7 +237,7 @@ td {
 /* Footer styles */
 footer {
   background-color: rgb(62, 53, 53);
-  height: 15vh;
+  height: 55vh;
 }
 
 .close {
