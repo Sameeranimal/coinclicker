@@ -34,8 +34,8 @@
             </style>
 
            <div class="amount_glass"> <div class="amount"><p id="score"></p></div> </div>
-           <button class="logo" onclick="add()"><img draggable="false" src="img/logo.png"></button>
-
+           <button class="logo" onclick="add()"><img id="logoImage" draggable="false" src="img/logo.png"></button>
+           <input type="file" id="imageUpload" accept="image/*" onchange="uploadImage()">
 
 
         </div>
@@ -171,6 +171,7 @@
      <script src="javascript/tab.js"></script>
      <script src="javascript/achievement.js"></script>
      <script src="javascript/session.js"></script>
+     <script src="javascript/upload.js"></script>
 
 
 
