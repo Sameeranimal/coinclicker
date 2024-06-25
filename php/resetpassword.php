@@ -54,8 +54,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     if (isset($user["Player_ID"])) {
         // Update the user's password in the database
         $sql = "UPDATE users SET pwd = ?, reset_token_hash = NULL, reset_token_expires_at = NULL WHERE Player_ID = ?";
+        $password_hash = password_hash($password, PASSWORD_DEFAULT);
         $stmt = $pdo->prepare($sql);
-        $stmt->execute([$password, $user["Player_ID"]]);
+        $stmt->execute([$password_hash, $user["Player_ID"]]);
     } else {
         die("User ID not found.");
     }
